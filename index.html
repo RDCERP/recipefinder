@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/bulma" /> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Recipe</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="recipe-wrapper">
+        <div class="recipe-search">
+          <h2 class="title">Find meals for your ingredients</h2>
+          <blockquote>
+            Quote <br />
+            <cite>who wrote it</cite>
+          </blockquote>
+          <div class="recipe-search-box"></div>
+          <form id="search-form">
+            <input
+              type="text"
+              class="search-bar"
+              id="user-input"
+              placeholder="Enter an ingredient for a recipe"
+            />
+            <button type="submit" class="btn search-btn">
+              <i class="fa-solid fa-bowl-food" id="submit"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="search-results">
+        <h2 class="title-recipe" id="recipe-list">Search results</h2>
+        <div class="recipes"></div>
+
+        <!-- <div class="the-recipe">
+                <div class="recipe-image">
+                    <img src="./assets/images/recipe-1.jpg" width="450" 
+                    height="auto" alt= "recipe-img"/>
+            </div>
+            <div class="recipe-name">
+                <h3>Fried Chicken</h3>
+                <a href="#" class = "recipe-btn">Get Recipe</a> -->
+      </div>
+
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Nutrition Information</h2>
+          <div id="Nutrition-facts"></div><br>
+          <h2>How to prepare</h2>
+          <ul id="instructions"></ul>
+        
+        </div>
+      
+      </div>
+      
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
