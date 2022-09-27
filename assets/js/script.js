@@ -91,12 +91,10 @@ const searchRecipe = async () => {                                          // S
   })
   )
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {                                              // When the user clicks on the span
+  span.onclick = function () {                                              // When the user clicks on the span (X)
     modal.style.display = "none";                                           // Close the modal
     }
 
-  // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {                                       // When the user clicks anywhere outside of the modal
     if (event.target == modal) {                                            // If the user clicks outside of the modal        
       modal.style.display = "none";                                         // Close the modal
