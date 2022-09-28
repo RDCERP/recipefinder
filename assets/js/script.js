@@ -4,7 +4,8 @@ var recipeList = document.querySelector(".recipes");                        // L
 var method = document.getElementById('instructions')                        // Instructions for recipe
 var modal = document.getElementById("myModal");                             // Modal
 var nutritionFacts = document.getElementById('Nutrition-facts')             // Nutrition facts
-var btn = document.getElementsByClassName("recipe-div");                    // When the user clicks on the button, open the modal          
+var btn = document.getElementsByClassName("recipe-div");   
+var recipeEl = document.querySelector(".recipes")                 // When the user clicks on the button, open the modal          
 console.log(btn)
 
 var span = document.getElementsByClassName("close")[0];                     // Get the <span> element that closes the modal
@@ -14,7 +15,7 @@ const searchRecipe = async () => {                                          // S
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "8e265fd8demsh64378718b27c8e2p18dd32jsn8767306f5220",
+      "X-RapidAPI-Key": "2830944460mshe36eaef80fe9dcfp11c088jsnc76463ac7bd7",
       "X-RapidAPI-Host": "tasty.p.rapidapi.com",
     },
   };
@@ -23,6 +24,45 @@ const searchRecipe = async () => {                                          // S
     `https://tasty.p.rapidapi.com/recipes/list?from=0&size=5&tags=under_30_minutes&q=${userInput.value}`,
     options
   );
+
+
+  const response2 = await fetch(                                             // Fetching the data from the API
+    `https://www.themealdb.com/api/json/v1/1/random.php`
+  );
+  
+  var url = "https://www.themealdb.com/api/json/v1/1/random.php";
+
+  console.log(response2.meals)
+
+  
+
+  $.getJSON(url, function (data) {
+      console.log(data);
+      var output = data.meals;
+
+      var recipeDiv = document.createElement("div");
+      recipeEl.appendChild(recipeDiv)
+
+      var directionsText = document.createElement("p")
+
+      directionsText.textContent = output[0].strArea
+
+    var recipeHeader = document.createElement("h1");
+     recipeHeader.textContent = output[0].strMeal
+     recipeDiv.appendChild(recipeHeader)
+  
+      for (var i = 0; i < output.length; i++) {
+          display.innerHTML +=
+  
+              `<img src="${output[i].strMealThumb}" alt="${output[i].strMeal}"> <br>
+          
+          
+          ${output[i].strMeal} <br>
+          Category:  ${output[i].strCategory} <br>
+          Source: <a href="${output[i].strSource}">${output[i].strSource}</a>`;
+      }
+  
+  });
 
   const json = await response.json();                                       // Converting the data to JSON
   let datajson = json.results;                                              // Getting the results from the JSON        
@@ -108,6 +148,8 @@ form.addEventListener("submit", function (event) {                          // A
   // console.log("got here");
     searchRecipe();                                                         // Calling the function to search for recipes  
   });
+
+
 
 
 
