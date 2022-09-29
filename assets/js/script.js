@@ -21,7 +21,7 @@ const searchRecipe = async () => {
 
   const response = await fetch(
     // Fetching the data from the API
-    `https://tasty.p.rapidapi.com/recipes/list?from=0&size=1&tags=under_30_minutes&q=${userInput.value}`,
+    `https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&tags=under_30_minutes&q=${userInput.value}`,
     options
   );
 
