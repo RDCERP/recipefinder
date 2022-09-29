@@ -39,10 +39,10 @@
 }
 
 body{
-    background-color: var(--color-1);
-    font-family: sans-serif;
+    background-color: darkgrey;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.5rem;
-    color: var(--color-2);
+    color: var(--color-4);
     margin: 0;
     padding: 0;
 }
@@ -180,4 +180,19 @@ body{
     text-decoration: none;
     cursor: pointer;
   }
-  /* */
+  /* additional styling to main boxes*/
+  .round-borders {
+    border-radius: 50px;
+    border: 3.5px solid black;
+    padding: 20px;
+    
+  }
+  .round-borders2 {
+    border-radius: 50px;
+    background: white;
+    border: 3.5px solid black;
+    padding: 20px;
+    
+  }
+
+ 
