@@ -2,47 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 
 }
 :root{
-    /* --color-1: pink;
-    --color-2: blue;
-    --color-3: green;
-    --color-4: red;;
-    --color-5: yellow;
-    --color-6: magenta;
-    --color-7: lightblue; */
 
-    /* --color-1: #5D5C61;
-    --color-2: #379683;
-    --color-3: #739FAE;
-    --color-4: #557A95;
-    --color-5: #B1A296;
-    --color-6: magenta;
-    --color-7: lightblue; */
-
-    /* --color-1: #A64AC9;
-    --color-2: #FCCD04;
-    --color-3: #FFB48F;
-    --color-4: #F5E6CC;
-    --color-5: #17E9E0;
-    --color-6: #A64AC9;
-    --color-7: #FCCD04; */
-
-    --color-1: #E24E42;
-    --color-2: #E9B000;
-    --color-3: #EB6E80;
-    --color-4: #008F95;
-    --color-5: #17E9E0;
-    --color-6: #A64AC9;
-    --color-7: #FCCD04;
+    --color-1: pink;
+    --color-2: black;
+    --color-3: red;
+    --color-4: #50C878;
+    --color-5: ;
+    --color-6: ;
+    --color-7: ;
 }
 
 body{
-    background-color: darkgrey;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
-    color: var(--color-4);
+    background-image: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80");
+    /* background-image: url("https://images.unsplash.com/photo-1517856497829-3047e3fffae1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Satisfy";
+    font-size: 2.5rem;
+    color: var(--color-2);
     margin: 0;
     padding: 0;
 }
@@ -53,19 +36,25 @@ body{
     border: 1px solid var(--color-4);
     border-radius: 5px;
     padding: 10px 20px;
+    align-items: center;
 }
 
 .title{
-    font-size: 2rem;
+    font-size: 4rem;
+    font-family: 'Satisfy';
     color: var(--color-4);
     margin-bottom: 1rem;
+}
+
+.title-recipe{
+    text-align: center;
 }
 
 .recipe-wrapper{
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
-    background: white;
+    /* background: transparent; */
     text-align: center;
 
 }
@@ -80,6 +69,7 @@ body{
 
 .recipe-search-box{
     color: var(--color-4);
+    size: 3rem;
     margin: 1.2rem 0;
     display: flex;
     align-items: stretch;
@@ -97,8 +87,8 @@ body{
 .search-bar{
  
     padding: 0 1rem;
-    font-size: 1.1rem;
-    font-family: inherit;
+    font-size: 2rem;
+    font-family: "Satisfy";
     outline: 0;
     border: 1px solid var(--color-5);
     border-top-left-radius: 2rem;
@@ -106,19 +96,31 @@ body{
 
 }
 
+#recipe-div, #recipe-name{
+    text-align: center;
+}
+
+#recipe-name{
+    text-align: center;
+}
 .search-bar ::placeholder{
     color: var(--color-5);
 }
 #recipe-name{
+    text-align: center;
+
     font-size: 20px;
     margin-bottom: 10px;
 }
 #recipe-img{
+    text-align: center;
     width: 350px;
     height: 250px;
     margin-bottom: 20px;
+    border-radius: 12px;
 }
 .search-btn{
+    text-align: center;
     width: 55px;
     height: 55px;
     font-size: 1.8rem;
@@ -137,6 +139,16 @@ body{
 
 .search-results {
     margin-top: 4rem;
+    /* background-color: rgba(243, 243, 243, 0.484); */
+    text-align: center;
+
+}
+.card-wrapper{
+    flex-wrap: wrap;
+}
+.card{
+    text-align: center;
+
 }
 
 /* The Modal (background) */
@@ -161,7 +173,8 @@ body{
     padding: 30px;
     border: 1px solid #888;
     width: 80%;
-  }
+
+}
   .recipe-div{
     cursor: pointer;
   }
@@ -180,19 +193,83 @@ body{
     text-decoration: none;
     cursor: pointer;
   }
-  /* additional styling to main boxes*/
-  .round-borders {
-    border-radius: 50px;
-    border: 3.5px solid black;
-    padding: 20px;
-    
+  #data{
+    text-align: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    align-content: center !important;
+    background-color: white;
+    font-size: 2rem;
+    box-shadow: 1px 3px;  
+    font-family: "Satisfy";
   }
-  .round-borders2 {
-    border-radius: 50px;
-    background: white;
-    border: 3.5px solid black;
-    padding: 20px;
-    
-  }
+  
 
- 
+/* CSS */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(124, 245, 203);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  background-size: cover;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
