@@ -30,11 +30,10 @@ const searchRecipe = async () => {
   let data = datajson.map(
     // Mapping the results
     (result) =>
-      `<h4 id="recipe-name">${result.name}</h4>
-    <div class="recipe-div" id="recipe-div" nutritionid=${result.id} recipeid=${result.instructions[0].id}><img id="recipe-img" class="recipeName" src="${result.thumbnail_url}" alt="img"/></div>`
+      `
+    <div class="recipe-div" id="recipe-div" nutritionid=${result.id} recipeid=${result.instructions[0].id}><h4 id="recipe-name">${result.name}</h4><img id="recipe-img" class="recipeName" src="${result.thumbnail_url}" alt="img"/></div>`
   );
-  recipeList.innerHTML = data; // Displaying the results
-
+  recipeList.innerHTML = data.join(""); // Displaying the results
   function findNutritionInfo(id) {
     // Function to find nutrition info
     let mdString = ""; // Empty string

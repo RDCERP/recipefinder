@@ -85,7 +85,6 @@ body{
     transform: scaleX(-1);
 } 
 .search-bar{
- 
     padding: 0 1rem;
     font-size: 2rem;
     font-family: "Satisfy";
@@ -93,11 +92,17 @@ body{
     border: 1px solid var(--color-5);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
+}
 
+.card.recipes {
+    display:flex;
+    flex-wrap: wrap;
 }
 
 #recipe-div, #recipe-name{
     text-align: center;
+    margin-right: 20px;
+       
 }
 
 #recipe-name{
@@ -148,6 +153,11 @@ body{
 }
 .card{
     text-align: center;
+
+}
+.display img{
+    width: 350px;
+    height: auto;
 
 }
 
